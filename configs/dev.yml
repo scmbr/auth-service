@@ -1,0 +1,18 @@
+environment: development
+
+postgres:
+  host: dev-db.local
+  port: 5432
+  sslmode: disable
+
+redis:
+  host: dev-redis.local
+  port: 6379
+  cacheTTL: 15s
+  maxAttempts: 3
+  deadLetterStream: my_stream_dl
+
+http:
+  port: 8081
+  readTimeout: 10s
+  writeTimeout: 10s
