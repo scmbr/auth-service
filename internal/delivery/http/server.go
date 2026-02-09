@@ -3,6 +3,7 @@ package http
 import (
 	"context"
 	"net/http"
+	"strconv"
 )
 
 type Server struct {
@@ -12,7 +13,7 @@ type Server struct {
 func NewServer(cfg *Config, handler http.Handler) *Server {
 	return &Server{
 		httpServer: &http.Server{
-			Addr:           cfg.Addr,
+			Addr:           cfg.Host + ":" + strconv.Itoa(cfg.Port),
 			Handler:        handler,
 			ReadTimeout:    cfg.ReadTimeout,
 			WriteTimeout:   cfg.WriteTimeout,
