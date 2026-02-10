@@ -4,7 +4,7 @@ import "time"
 
 type Session struct {
 	ID           string
-	UserID       string
+	UserID       *string
 	ExpiresAt    time.Time
 	IssuedAt     time.Time
 	RefreshToken string
