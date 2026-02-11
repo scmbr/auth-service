@@ -1,4 +1,4 @@
-package entity
+package scope
 
 type Scope struct {
 	ID          string

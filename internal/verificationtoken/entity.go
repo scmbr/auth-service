@@ -1,4 +1,4 @@
-package entity
+package verificationtoken
 
 import "time"
 
